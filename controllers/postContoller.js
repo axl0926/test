@@ -67,7 +67,7 @@ export const updatePost = async (req, res) => {
 			res.json({
 				success: true,
 				message: "수정 완료",
-				redirectUrl: `/detail/${_id.toString()}`,
+				redirectUrl: `/detail/${req.params.id.toString()}`,
 			});
 		} else {
 			res.status(404).json({
